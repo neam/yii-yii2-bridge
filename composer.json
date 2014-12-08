@@ -1,0 +1,26 @@
+{
+    "name": "neam/yii-yii2-bridge",
+    "description": "Use Yii 2 widgets in Yii 1 applications",
+    "keywords": ["yii1", "yii2", "bridge", "forwards-compatibility"],
+    "homepage": "https://github.com/neam/yii-yii2-bridge",
+    "type": "yii-extension",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Fredrik Wollsén",
+            "email": "fredrik@neam.se"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/neam/yii-yii2-bridge",
+        "issues": "https://github.com/neam/yii-yii2-bridge/issues"
+    },
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "neam\\yii_yii2_bridge\\": ""
+        }
+    }
+}
