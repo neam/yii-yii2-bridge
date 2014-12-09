@@ -4,7 +4,7 @@ $params = require(__DIR__ . '/params.php');
 
 $config = [
     'id' => 'basic',
-    'basePath' => dirname(__DIR__) . DIRECTORY_SEPARATOR . '..',
+    'basePath' => dirname(__DIR__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'app',
     'bootstrap' => ['log'],
     'aliases' => [
         '@vendor' => dirname(__DIR__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..',
