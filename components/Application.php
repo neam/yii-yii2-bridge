@@ -8,20 +8,10 @@ class Application extends \yii\web\Application
 {
 
     /**
-     * Sets some aliases that yii2 widgets expect
-     */
-    public function registerYii2Aliases()
-    {
-        Yii::setAlias('@vendor', Yii::getPathOfAlias('vendor'));
-        Yii::setAlias('@bower', Yii::getPathOfAlias('vendor') . DIRECTORY_SEPARATOR . 'bower');
-    }
-
-    /**
      * Overriden to run registerYii2Aliases()
      */
     public function getView()
     {
-        $this->registerYii2Aliases();
         return parent::getView();
     }
 

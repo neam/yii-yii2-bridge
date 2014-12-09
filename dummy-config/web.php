@@ -6,6 +6,10 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__) . DIRECTORY_SEPARATOR . '..',
     'bootstrap' => ['log'],
+    'aliases' => [
+        '@vendor' => dirname(__DIR__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..',
+        '@bower' => dirname(__DIR__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'bower',
+    ],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
