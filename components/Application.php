@@ -28,13 +28,14 @@ class Application extends \yii\web\Application
     }
 
     /**
-     * Overridden not to register the Yii 2 errorHandler component as a PHP error handler,
-     * since that would leave us with both yii 1 and yii 2 error handlers active. Chaos.
+     * Overridden not to register the Yii 2 errorHandler component as a PHP error handler
+     * unless YII2_ENABLE_ERROR_HANDLER is set to true, since that would leave us with both
+     * yii 1 and yii 2 error handlers active. Chaos.
      * @param array $config application config
      */
     protected function registerErrorHandler(&$config)
     {
-        if (false && YII_ENABLE_ERROR_HANDLER) {
+        if (defined('YII2_ENABLE_ERROR_HANDLER') && YII2_ENABLE_ERROR_HANDLER) {
             if (!isset($config['components']['errorHandler']['class'])) {
                 echo "Error: no errorHandler component is configured.\n";
                 exit(1);
